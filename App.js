@@ -1,21 +1,43 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { Text, View, Image, StyleSheet } from 'react-native'
+import { FontAwesome } from '@expo/vector-icons'
+import logo from './assets/eevee.png'
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+function App() {
+    return ( <
+        View >
+        <
+        Image source = { logo }
+        style = { styles.imagem }
+        /> <
+        Text >
+        <
+        FontAwesome name = "user-circle"
+        size = { 50 } > < /FontAwesome>
+        Olá Mundo!
+        <
+        /Text> <
+        FontAwesome.Button name = "shopping.cart"
+        style = { styles.botao } >
+        comprar < /FontAwesome.Button> <
+        /View>
+    )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+            imagem: {
+                width: '90%',
+                height: 300,
+                resizeMode: 'center'
+            },
+            botao: {
+                width: '50%',
+                heigth: 30
+            },
+            titulo: {
+                fontSize: 30,
+                color: "#1A237E"
+            }
+        )
+
+        export default App
